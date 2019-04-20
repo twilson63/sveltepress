@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^0.6.2",
+    "ramda": "^0.26.1",
+    "shelljs": "^0.8.3",
+    "svelte": "^3.0.0-beta.28",
+    "yaml-front-matter": "^4.0.0"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "now-build": "node build.js",
+    "dev": "w3 --directory dist"
+  },
+  "devDependencies": {
+    "w3": "^1.0.1"
+  }
+}

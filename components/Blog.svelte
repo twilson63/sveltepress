@@ -1,0 +1,27 @@
+<script>
+export let articles 
+</script>
+<svelte:head>
+  <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css">
+</svelte:head>
+<section class="hero is-primary">
+  <div class="container">
+    <h1 class="title">My Blog</h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2 class="title">Articles</h2>
+    <ul>
+    {#each articles as article}
+      <li>
+        <a href="/{article.ID}.html"><h3 class="subtitle">{article.title}</h3></a>
+      </li>
+    {/each}
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>MyBlog. Built by Markdown Press.</p>
+</footer>
