@@ -1,6 +1,7 @@
 require('svelte/register')
+const pkg = require('./package.json')
 const fs = require('fs')
-const { map, pipe, filter, assoc } = require('ramda')
+const { map, pipe, filter, assoc, pathOr } = require('ramda')
 const yamlFront = require('yaml-front-matter')
 const marked = require('marked')
 const shell = require('shelljs')
@@ -18,7 +19,9 @@ const template = (head, html) => `<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <title>${pathOr('Blog', ['meta', 'title'], pkg)}</title>
     ${head}
   </head>
   <body>
@@ -29,7 +32,7 @@ const template = (head, html) => `<!doctype html>
 const createArticle = article => {
  article = assoc('content', marked(article.__content), article)
   
- const { html, head } = Post.render({ blog: {title: 'MyBlog'}, article })
+ const { html, head } = Post.render({ meta: pkg.meta, article })
  fs.writeFileSync('./dist/' + article.ID + '.html', template(head, html))
 }
 
@@ -45,7 +48,7 @@ const data = pipe(
 )(files)
 
 
-const { html, head }  = Blog.render({ articles: data })
+const { html, head }  = Blog.render({ meta: pkg.meta, articles: data })
 // render index template
 fs.writeFileSync('./dist/index.html', template(head, html))
 

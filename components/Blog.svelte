@@ -1,4 +1,5 @@
 <script>
+export let meta
 export let articles 
 </script>
 <svelte:head>
@@ -6,7 +7,7 @@ export let articles
 </svelte:head>
 <section class="hero is-primary">
   <div class="container">
-    <h1 class="title">My Blog</h1>
+    <h1 class="title">{meta.title}</h1>
   </div>
 </section>
 <section class="section">
@@ -15,7 +16,7 @@ export let articles
     <ul>
     {#each articles as article}
       <li>
-        <a href="/{article.ID}.html"><h3 class="subtitle">{article.title}</h3></a>
+        <a href="/{article.ID}"><h3 class="subtitle">{article.title}</h3></a>
       </li>
     {/each}
     </ul>
@@ -23,5 +24,5 @@ export let articles
 </section>
 
 <footer class="footer">
-  <p>MyBlog. Built by Markdown Press.</p>
+  <p>{meta.title}. Built by Markdown Press.</p>
 </footer>

@@ -1,5 +1,5 @@
 <script>
-export let blog
+export let meta
 export let article
 </script>
 <svelte:head>
@@ -8,7 +8,7 @@ export let article
 
 <section class="section">
   <div class="container">
-    <a href="/"><h1 class="title">{blog.title}</h1></a>
+    <a href="/"><h1 class="title">{meta.title}</h1></a>
   </div>
 </section>
 <section class="section">

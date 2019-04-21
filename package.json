@@ -13,9 +13,12 @@
   "scripts": {
     "build": "node build.js",
     "now-build": "node build.js",
-    "dev": "w3 --directory dist"
+    "dev": "w3 dist"
   },
   "devDependencies": {
-    "w3": "^1.0.1"
+    "w3": "^2.0.0"
+  },
+  "meta": {
+    "title": "MyBlog"
   }
 }
