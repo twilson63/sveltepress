@@ -22,6 +22,12 @@
     "w3": "^2.0.0"
   },
   "meta": {
-    "title": "MyBlog"
+    "title": "SveltePress",
+    "description": "Svelte + Markdown === AwesomeSauce!",
+    "author": {
+      "name": "Tom Wilson",
+      "twitter": "@twilson63",
+      "avatar": "https://s.gravatar.com/avatar/eaee4a968ac2e346ec28faf0c46ffdc7?s=80"
+    }
   }
 }

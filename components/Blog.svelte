@@ -6,8 +6,15 @@ export let articles
   <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css">
 </svelte:head>
 <section class="hero is-primary">
-  <div class="container">
-    <h1 class="title">{meta.title}</h1>
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {meta.title} 
+      </h1>
+      <h2 class="subtitle">
+        {meta.description}
+      </h2>
+    </div>
   </div>
 </section>
 <section class="section">
