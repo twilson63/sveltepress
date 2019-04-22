@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "date-fns": "^1.30.1",
     "marked": "^0.6.2",
     "ramda": "^0.26.1",
     "shelljs": "^0.8.3",
@@ -27,7 +28,8 @@
     "author": {
       "name": "Tom Wilson",
       "twitter": "@twilson63",
-      "avatar": "https://s.gravatar.com/avatar/eaee4a968ac2e346ec28faf0c46ffdc7?s=80"
+      "avatar": "https://s.gravatar.com/avatar/eaee4a968ac2e346ec28faf0c46ffdc7?s=80",
+      "bio": "A developer who is passionate about learning and teaching, loves JavaScript, SvelteJS, NodeJS, and CouchDb"
     }
   }
 }

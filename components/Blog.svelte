@@ -1,7 +1,17 @@
 <script>
+import { format } from 'date-fns'
+
 export let meta
 export let articles 
 </script>
+<style>
+  .post {
+    margin-bottom: 1.5rem;
+  } 
+  .section {
+    padding: 1.5rem;
+  }
+</style>
 <svelte:head>
   <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css">
 </svelte:head>
@@ -17,19 +27,55 @@ export let articles
     </div>
   </div>
 </section>
+<!-- author info -->
 <section class="section">
   <div class="container">
-    <h2 class="title">Articles</h2>
+    <h3 class="subtitle">About the Author</h3>
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <img src={meta.author.avatar} alt={meta.author.name} />
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>{meta.author.name}</strong> <small>{meta.author.twitter}</small>
+            <br>
+            {meta.author.bio}
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
     <ul>
     {#each articles as article}
       <li>
-        <a href="/{article.ID}"><h3 class="subtitle">{article.title}</h3></a>
+        <article class="media post">
+          <div class="media-content">
+            <div class="content">
+              <a href="/{article.ID}"><h3 class="title has-text-primary">{article.title}</h3></a>
+              <p>{article.description}</p>
+            </div>
+          </div>
+          <div class="media-right">
+            <p class="date">{format(article.date, 'MM/DD/YYYY')}</p>
+          </div>
+        </article>
       </li>
     {/each}
     </ul>
   </div>
 </section>
-
 <footer class="footer">
-  <p>{meta.title}. Built by Markdown Press.</p>
+  <div class="content has-text-centered">
+    <p>
+      <strong>{meta.title}</strong> by <a href="https://twitter.com/{meta.author.twitter}">{meta.author.name}</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. Built using SveltePress.com.
+    </p>
+  </div>
 </footer>
+
