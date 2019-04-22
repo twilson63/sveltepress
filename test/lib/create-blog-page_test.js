@@ -12,7 +12,7 @@ test('Create Blog HTML page from component', t => {
       return
     }
   })
-  const pkg = { meta: {title: 'Foo'}}
+  const pkg = { meta: {title: 'Foo', ID: 'foo', author: { name: 'beep', avatar: 'https://fillmurray.com/64/64'}}}
 
   const createBlog = createBlogPageHOF(pkg)('foo')
   createBlog([{ID: '1', title: 'A test article', content: '<h1>Foo</h1>'}])

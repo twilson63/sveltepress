@@ -1,5 +1,6 @@
 {
-  "name": "blog",
+  "name": "sveltepress",
+  "description": "Svelte meets Markdown and creates a blog site builder",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
