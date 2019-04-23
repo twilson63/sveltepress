@@ -3,6 +3,7 @@ ID: welcome
 title: Welcome to SveltePress 
 date: 2019-04-21
 description: "SveltePress is a static site generator built on SvelteJS with Markdown. This site will get you up and going with SveltePress and you will have your blog built in no time."
+image: https://fillmurray.com/300/300
 ---
 
 Welcome to SveltePress.com, this site explains the SveltePress project and how to get up and running 
@@ -33,5 +34,25 @@ Markdown is an abstraction on top of HTML that creates a readable source and gen
 ## What if I don't like the way SveltePress is setup?
 
 SveltePress is a project that is designed to be open and clear about what it is trying to accomplish and welcomes modification, you can easily change the components in the components folder or change the build pipeline in the build.js file. Create your own build steps in the lib file. The projects setup is designed in a way to empower you the author to get started creating your sites as quickly as possible and SveltePress should get out of the way. The only things you need to learn about SveltePress is how to build a press site, how to run in development mode and how to deploy.
+
+## What is front-matter? 
+
+Front-matter is the yaml section you place above your markdown file, to specify meta data about your markdown file.
+
+> REQUIRED: ID, title, date
+
+``` markdown
+---
+ID: my-article 
+title: My Article
+date: 2019-04-22
+---
+
+[Markdown goes here]
+```
+
+You can add any key value pair you want to the front matter, but be sure to include the ID, title and date, these key value pairs are used by the build steps to create url links, provide title information and sorting by date features for the framework.
+
+> OPTIONS: You can always choose to modify the build steps and remove the need for these key elements.
 
 

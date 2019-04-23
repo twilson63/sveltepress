@@ -1,5 +1,6 @@
 <script>
 import { format } from 'date-fns'
+import Footer from './Footer.svelte'
 
 export let meta
 export let articles 
@@ -70,12 +71,4 @@ export let articles
     </ul>
   </div>
 </section>
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>{meta.title}</strong> by <a href="https://twitter.com/{meta.author.twitter}">{meta.author.name}</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. Built using SveltePress.com.
-    </p>
-  </div>
-</footer>
-
+<Footer {meta} />

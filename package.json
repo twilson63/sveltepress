@@ -12,13 +12,20 @@
     "svelte": "^3.0.0-beta.28",
     "yaml-front-matter": "^4.0.0"
   },
+  "watch": {
+    "dev": "*.md"
+  },
   "scripts": {
     "build": "node build.js",
     "now-build": "node build.js",
-    "dev": "w3 dist",
-    "test": "tape test/index.js"
+    "dev": "yarn build && yarn w3",
+    "w3": "w3 dist",
+    "test": "tape test/index.js",
+    "watch": "npm-watch"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.6.0",
     "rewire": "^4.0.1",
     "tape": "^4.10.1",
     "w3": "^2.0.0"
