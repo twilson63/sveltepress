@@ -9,7 +9,7 @@
     "marked": "^0.6.2",
     "ramda": "^0.26.1",
     "shelljs": "^0.8.3",
-    "svelte": "^3.0.0-beta.28",
+    "svelte": "^3.0.0",
     "yaml-front-matter": "^4.0.0"
   },
   "watch": {
