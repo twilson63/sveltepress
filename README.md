@@ -13,12 +13,8 @@ tool for any site that you have content that can be compiled and delivered.
 ## Why?
 
 There are a lot of SSGs and one could argue it is a solved problem, but I wanted to see what this might look like
-using `svelte` which has a very simple template language and is very much focused on html, css, and javascript, 
-versus having to learn a bunch on patterns and a lot of tooling. Also, markdown is great for creating and managing
-content, finally leveraging tools like `zeit` to automatically deploy when pushed to github. Getting started is
-straight forward if you have a good solid background in html, css, and javascript. Also, you will neeed nodejs
-installed and have a little knowledge about npm or yarn. If you want to deploy with a single command, getting
-a zeit account makes deploying static web apps one command.
+using `svelte` which is a superset of html, versus having to learn a bunch on patterns and a lot of tooling. Also, 
+markdown is great for creating and managing content, finally leveraging tools like `zeit` to automatically deploy when pushed to github. Getting started is straight forward if you have a good solid background in html, css, and javascript. Also, you will neeed nodejs installed and have a little knowledge about npm or yarn. If you want to deploy with a single command, getting a zeit account makes deploying static web apps one command.
 
 ## Usage
 
