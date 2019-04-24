@@ -20,7 +20,7 @@ export let articles
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        {meta.title} 
+        {meta.title}  
       </h1>
       <h2 class="subtitle">
         {meta.description}
