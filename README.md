@@ -53,6 +53,12 @@ etc.
 }
 ```
 
+Run the dev server
+
+``` sh
+npm run dev
+```
+
 Now, you are ready to start adding content, this blog press project uses markdown with front matter for your 
 content files.  Here is an example,
 
